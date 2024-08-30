@@ -1,5 +1,5 @@
 # depoly-Fabric-IPFS-on-IoTs
-有空改成英文
+This project aims to establish a system that includes 4m Raspberry Pi devices and n hosts (where m ≥ n, and n > 2). The Raspberry Pis are configured with TPM (Trusted Platform Module) and are capable of measuring their system state to generate verification evidence. Using this verification evidence and their private keys, the Raspberry Pis generate attestation reports. Every m Raspberry Pis form a group, with a host serving as the server within the group. The n hosts form a blockchain network based on the Hyperledger Fabric architecture. This network collects the information (including verification evidence, attestation reports, etc.) uploaded by the Raspberry Pi devices to the server and then uploads it to an IPFS (InterPlanetary File System) node. Through the design of communication protocols and consensus mechanisms, the system will achieve distributed large-scale storage, distributed root of trust generation, and verification.
 # 一. 安装Debian系统
 在windows下安装debian系统。
 
@@ -71,4 +71,4 @@ docker pull hyperledger/fabric-xxx:[version]
 
 拉取速度很慢，be patient
 
-## 5.双机部署
+# 三、安装IPFS
