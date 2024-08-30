@@ -1,4 +1,5 @@
 # depoly-Fabric-IPFS-on-IoTs
+有空改成英文
 # 一. 安装Debian系统
 在windows下安装debian系统。
 
@@ -63,8 +64,11 @@ export PATH=$PATH:$GOROOT/bin
 }
 ```
 
-如果有没有拉取成功的镜像，自行去github下载解压即可。 
+如果有没有拉取成功的镜像使用docker pull自行拉取：
+```bash
+docker pull hyperledger/fabric-xxx:[version]
+```
 
-拉取速度很慢，耐心等待~
+拉取速度很慢，be patient
 
 ## 5.双机部署
