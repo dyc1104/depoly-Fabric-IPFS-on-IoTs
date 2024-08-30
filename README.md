@@ -20,12 +20,12 @@ apt-get install docker-compose
 ## 3.安装golang
 1）wget获取go语言安装包
 ```bash
-wget https://go.dev/dl/go1.21.1.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.19.8.linux-amd64.tar.gz
 ```
  2）解压并安装
 
 ```bash
-sudo tar -C /usr/local -xzf go1.21.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.19.8.linux-amd64.tar.gz
 ```
 
 3）设置环境变量
