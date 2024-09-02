@@ -72,6 +72,8 @@ docker pull hyperledger/fabric-xxx:[version]
 拉取速度很慢，be patient
 
 # 三、安装IPFS
+使用守护进程来实现ipfs，docker pull不下来
+这样实现会给后面docker镜像打包带来麻烦，到时候再解，docker pull连接超时的问题暂时没解决掉
 根据官方教程安装IPFS kubo for go
 参考链接：<https://docs.ipfs.tech/install/command-line/#install-official-binary-distributions>
 ## 1.IPFS节点初始化
