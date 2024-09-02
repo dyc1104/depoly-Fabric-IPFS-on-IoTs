@@ -72,3 +72,48 @@ docker pull hyperledger/fabric-xxx:[version]
 拉取速度很慢，be patient
 
 # 三、安装IPFS
+根据官方教程安装IPFS kubo for go
+参考链接：<https://docs.ipfs.tech/install/command-line/#install-official-binary-distributions>
+## 1.IPFS节点初始化
+```bash
+ipfs init
+```
+## 2.运行IPFS守护进程
+在新的终端窗口运行
+```bash
+ipfs daemon
+```
+## 3.配置IPFS作为系统服务
+创建一个新的 systemd 服务文件：
+```bash
+sudo nano /etc/systemd/system/ipfs.service
+```
+添加下列内容：
+```bash
+[Unit]
+Description=IPFS daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/ipfs daemon
+Restart=on-failure
+User=your-username
+Group=your-group
+
+[Install]
+WantedBy=multi-user.target
+```
+重新加载
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable ipfs
+sudo systemctl start ipfs
+```
+检查
+```bash
+sudo systemctl status ipfs
+```
+使用ipfs
+```bash
+ipfs add a.txt
+```
