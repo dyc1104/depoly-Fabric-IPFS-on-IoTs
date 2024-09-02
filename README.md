@@ -105,8 +105,6 @@ After=network.target
 [Service]
 ExecStart=/usr/local/bin/ipfs daemon
 Restart=on-failure
-User=your-username
-Group=your-group
 
 [Install]
 WantedBy=multi-user.target
