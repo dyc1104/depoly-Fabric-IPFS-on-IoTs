@@ -1,5 +1,9 @@
 # depoly-Fabric-IPFS-on-IoTs
-This project aims to establish a system that includes 4m Raspberry Pi devices and n hosts (where m ≥ n, and n > 2). The Raspberry Pis are configured with TPM (Trusted Platform Module) and are capable of measuring their system state to generate verification evidence. Using this verification evidence and their private keys, the Raspberry Pis generate attestation reports. Every m Raspberry Pis form a group, with a host serving as the server within the group. The n hosts form a blockchain network based on the Hyperledger Fabric architecture. This network collects the information (including verification evidence, attestation reports, etc.) uploaded by the Raspberry Pi devices to the server and then uploads it to an IPFS (InterPlanetary File System) node. Through the design of communication protocols and consensus mechanisms, the system will achieve distributed large-scale storage, distributed root of trust generation, and verification.
+This project aims to establish a system that includes 4m Raspberry Pi devices and n hosts (where m ≥ n, and n > 2). The Raspberry Pis are configured with TPM (Trusted Platform Module) and are capable of measuring their system state to generate verification evidence. Using this verification evidence and their private keys, the Raspberry Pis generate attestation reports.
+
+Every m Raspberry Pis form a group, with a host serving as the server within the group. The n hosts form a blockchain network based on the Hyperledger Fabric architecture. This network collects the information (including verification evidence, attestation reports, etc.) uploaded by the Raspberry Pi devices to the server and then uploads it to an IPFS (InterPlanetary File System) node. 
+
+Through the design of communication protocols and consensus mechanisms, the system will achieve distributed large-scale storage, distributed root of trust generation, and verification.
 # 一. 安装Debian系统
 在windows下安装debian系统。
 
@@ -73,7 +77,9 @@ docker pull hyperledger/fabric-xxx:[version]
 
 # 三、安装IPFS
 使用守护进程来实现ipfs，docker pull不下来
+
 这样实现会给后面docker镜像打包带来麻烦，到时候再解，docker pull连接超时的问题暂时没解决掉
+
 根据官方教程安装IPFS kubo for go
 参考链接：<https://docs.ipfs.tech/install/command-line/#install-official-binary-distributions>
 ## 1.IPFS节点初始化
